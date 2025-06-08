@@ -304,7 +304,7 @@ namespace ValheimLegends
         {
             get
             {
-                return 2f * VL_GlobalConfigs.g_SkillGainModifer;
+                return 8f * VL_GlobalConfigs.g_SkillGainModifer;
             }
         }
         public static float GetWeakenCost
@@ -325,7 +325,7 @@ namespace ValheimLegends
         {
             get
             {
-                return .5f * VL_GlobalConfigs.g_SkillGainModifer;
+                return 1.4f * VL_GlobalConfigs.g_SkillGainModifer;
             }
         }
         public static float GetCharmCost
@@ -346,7 +346,7 @@ namespace ValheimLegends
         {
             get
             {
-                return .85f * VL_GlobalConfigs.g_SkillGainModifer;
+                return 2.6f * VL_GlobalConfigs.g_SkillGainModifer;
             }
         }
 
@@ -372,7 +372,7 @@ namespace ValheimLegends
         {
             get
             {
-                return .15f * VL_GlobalConfigs.g_SkillGainModifer;
+                return 4f * VL_GlobalConfigs.g_SkillGainModifer;
             }
         }
         public static float GetPsiBoltCost
@@ -393,7 +393,7 @@ namespace ValheimLegends
         {
             get
             {
-                return .05f * VL_GlobalConfigs.g_SkillGainModifer;
+                return 5f * VL_GlobalConfigs.g_SkillGainModifer;
             }
         }
         public static float GetFlyingKickCost
@@ -414,7 +414,7 @@ namespace ValheimLegends
         {
             get
             {
-                return .3f * VL_GlobalConfigs.g_SkillGainModifer;
+                return 0.8f * VL_GlobalConfigs.g_SkillGainModifer;
             }
         }
 
@@ -440,7 +440,7 @@ namespace ValheimLegends
         {
             get
             {
-                return .6f * VL_GlobalConfigs.g_SkillGainModifer;
+                return 1.8f * VL_GlobalConfigs.g_SkillGainModifer;
             }
         }
         public static float GetBackstabCost
@@ -461,7 +461,7 @@ namespace ValheimLegends
         {
             get
             {
-                return .55f * VL_GlobalConfigs.g_SkillGainModifer;
+                return 2.6f * VL_GlobalConfigs.g_SkillGainModifer;
             }
         }
         public static float GetFadeCost
@@ -482,7 +482,7 @@ namespace ValheimLegends
         {
             get
             {
-                return .2f * VL_GlobalConfigs.g_SkillGainModifer;
+                return 1f * VL_GlobalConfigs.g_SkillGainModifer;
             }
         }
 
@@ -508,7 +508,7 @@ namespace ValheimLegends
         {
             get
             {
-                return .8f * VL_GlobalConfigs.g_SkillGainModifer;
+                return 1.8f * VL_GlobalConfigs.g_SkillGainModifer;
             }
         }
         public static float GetHealCost
@@ -536,7 +536,7 @@ namespace ValheimLegends
         {
             get
             {
-                return .4f * VL_GlobalConfigs.g_SkillGainModifer;
+                return 1.3f * VL_GlobalConfigs.g_SkillGainModifer;
             }
         }
         public static float GetPurgeCost
@@ -557,7 +557,7 @@ namespace ValheimLegends
         {
             get
             {
-                return .4f * VL_GlobalConfigs.g_SkillGainModifer;
+                return 0.8f * VL_GlobalConfigs.g_SkillGainModifer;
             }
         }
 
@@ -583,7 +583,7 @@ namespace ValheimLegends
         {
             get
             {
-                return .25f * VL_GlobalConfigs.g_SkillGainModifer;
+                return 0.5f * VL_GlobalConfigs.g_SkillGainModifer;
             }
         }
         public static float GetRiposteCost
@@ -604,7 +604,7 @@ namespace ValheimLegends
         {
             get
             {
-                return .15f * VL_GlobalConfigs.g_SkillGainModifer;
+                return 0.2f * VL_GlobalConfigs.g_SkillGainModifer;
             }
         }
         public static float GetBlinkStrikeCost
@@ -625,7 +625,7 @@ namespace ValheimLegends
         {
             get
             {
-                return .6f * VL_GlobalConfigs.g_SkillGainModifer;
+                return 1.5f * VL_GlobalConfigs.g_SkillGainModifer;
             }
         }
 
@@ -651,7 +651,7 @@ namespace ValheimLegends
         {
             get
             {
-                return .75f * VL_GlobalConfigs.g_SkillGainModifer;
+                return 1f * VL_GlobalConfigs.g_SkillGainModifer;
             }
         }
         public static float GetWarpCost
@@ -679,7 +679,7 @@ namespace ValheimLegends
         {
             get
             {
-                return .5f * VL_GlobalConfigs.g_SkillGainModifer;
+                return 0.2f * VL_GlobalConfigs.g_SkillGainModifer;
             }
         }
         public static float GetReplicaCost
@@ -700,7 +700,7 @@ namespace ValheimLegends
         {
             get
             {
-                return .75f * VL_GlobalConfigs.g_SkillGainModifer;
+                return 1.5f * VL_GlobalConfigs.g_SkillGainModifer;
             }
         }
         public static float GetForceWaveCost
@@ -714,7 +714,7 @@ namespace ValheimLegends
         {
             get
             {
-                return .4f * VL_GlobalConfigs.g_SkillGainModifer;
+                return 1.5f * VL_GlobalConfigs.g_SkillGainModifer;
             }
         }
         public static float GetForceWaveCooldown
@@ -747,7 +747,7 @@ namespace ValheimLegends
         {
             get
             {
-                return .9f * VL_GlobalConfigs.g_SkillGainModifer;
+                return 1f * VL_GlobalConfigs.g_SkillGainModifer;
             }
         }
         public static float GetMeteorCost
@@ -775,7 +775,7 @@ namespace ValheimLegends
         {
             get
             {
-                return 1.6f * VL_GlobalConfigs.g_SkillGainModifer;
+                return 2f * VL_GlobalConfigs.g_SkillGainModifer;
             }
         }
         public static float GetFrostNovaCost
@@ -796,7 +796,7 @@ namespace ValheimLegends
         {
             get
             {
-                return .75f * VL_GlobalConfigs.g_SkillGainModifer; 
+                return 1f * VL_GlobalConfigs.g_SkillGainModifer; 
             }
         }
 
@@ -822,7 +822,7 @@ namespace ValheimLegends
         {
             get
             {
-                return 1.2f * VL_GlobalConfigs.g_SkillGainModifer;
+                return 1.8f * VL_GlobalConfigs.g_SkillGainModifer;
             }
         }
         public static float GetLeapCost
@@ -843,7 +843,7 @@ namespace ValheimLegends
         {
             get
             {
-                return .4f * VL_GlobalConfigs.g_SkillGainModifer;
+                return 1.8f * VL_GlobalConfigs.g_SkillGainModifer;
             }
         }
         public static float GetStaggerCost
@@ -864,7 +864,7 @@ namespace ValheimLegends
         {
             get
             {
-                return .6f * VL_GlobalConfigs.g_SkillGainModifer;
+                return 1.8f * VL_GlobalConfigs.g_SkillGainModifer;
             }
         }
         public static float GetHarpoonPullCost
@@ -925,7 +925,7 @@ namespace ValheimLegends
         {
             get
             {
-                return 1f * VL_GlobalConfigs.g_SkillGainModifer;
+                return 2.7f * VL_GlobalConfigs.g_SkillGainModifer;
             }
         }
         public static float GetRootCost
@@ -953,7 +953,7 @@ namespace ValheimLegends
         {
             get
             {
-                return .15f * VL_GlobalConfigs.g_SkillGainModifer;
+                return 1.4f * VL_GlobalConfigs.g_SkillGainModifer;
             }
         }
         public static float GetDefenderCost
@@ -974,7 +974,7 @@ namespace ValheimLegends
         {
             get
             {
-                return 1.9f * VL_GlobalConfigs.g_SkillGainModifer;
+                return 2.7f * VL_GlobalConfigs.g_SkillGainModifer;
             }
         }
 
@@ -994,7 +994,7 @@ namespace ValheimLegends
         }
         public static float GetEnrageSkillGain(Player p)
         {
-            float xp = 1.2f * VL_GlobalConfigs.g_SkillGainModifer;
+            float xp = 1.8f * VL_GlobalConfigs.g_SkillGainModifer;
             return xp;
         }
         public static float GetSpiritBombCost(Player p)
@@ -1009,7 +1009,7 @@ namespace ValheimLegends
         }
         public static float GetSpiritBombSkillGain(Player p)
         {
-            float xp = .9f * VL_GlobalConfigs.g_SkillGainModifer;
+            float xp = 1.8f * VL_GlobalConfigs.g_SkillGainModifer;
             return xp;
         }
         public static float GetShellCost(Player p)
@@ -1024,7 +1024,7 @@ namespace ValheimLegends
         }
         public static float GetShellSkillGain(Player p)
         {
-            float xp = 1.6f * VL_GlobalConfigs.g_SkillGainModifer;
+            float xp = 1.8f * VL_GlobalConfigs.g_SkillGainModifer;
             return xp;
         }
 
@@ -1044,7 +1044,7 @@ namespace ValheimLegends
         }
         public static float GetDashSkillGain (Player p)
         {
-            float xp = .45f * VL_GlobalConfigs.g_SkillGainModifer;
+            float xp = .5f * VL_GlobalConfigs.g_SkillGainModifer;
             return xp;
         }
         public static float GetBerserkCost(Player p)
@@ -1059,7 +1059,7 @@ namespace ValheimLegends
         }
         public static float GetBerserkSkillGain(Player p)
         {
-            float xp = 1.2f * VL_GlobalConfigs.g_SkillGainModifer;
+            float xp = 2.7f * VL_GlobalConfigs.g_SkillGainModifer;
             return xp;
         }
         public static float GetExecuteCost(Player p)
@@ -1074,7 +1074,7 @@ namespace ValheimLegends
         }
         public static float GetExecuteSkillGain(Player p)
         {
-            float xp = 1.2f * VL_GlobalConfigs.g_SkillGainModifer;
+            float xp = 2.4f * VL_GlobalConfigs.g_SkillGainModifer;
             return xp;
         }
 
@@ -1094,7 +1094,7 @@ namespace ValheimLegends
         }
         public static float GetPowerShotSkillGain(Player p)
         {
-            float xp = .9f * VL_GlobalConfigs.g_SkillGainModifer;
+            float xp = 1.5f * VL_GlobalConfigs.g_SkillGainModifer;
             return xp;
         }
         public static float GetShadowStalkCost(Player p)
@@ -1109,7 +1109,7 @@ namespace ValheimLegends
         }
         public static float GetShadowStalkSkillGain(Player p)
         {
-            float xp = 1.4f * VL_GlobalConfigs.g_SkillGainModifer;
+            float xp = 3f * VL_GlobalConfigs.g_SkillGainModifer;
             return xp;
         }
         public static float GetSummonWolfCost(Player p)
@@ -1124,7 +1124,7 @@ namespace ValheimLegends
         }
         public static float GetSummonWolfSkillGain(Player p)
         {
-            float xp = 3.5f * VL_GlobalConfigs.g_SkillGainModifer;
+            float xp = 27f * VL_GlobalConfigs.g_SkillGainModifer;
             return xp;
         }
 
