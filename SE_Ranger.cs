@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,14 +28,14 @@ namespace ValheimLegends
             m_ttl = m_baseTTL;
         }
 
-        //public override void ModifySpeed(ref float speed)
-        //{
-        //    if(hitCount > 0)
-        //    {
-        //        speed *= 2f;
-        //    }
-        //    base.ModifySpeed(ref speed);
-        //}
+        public override void ModifySpeed(float baseSpeed, ref float speed, Character character, Vector3 dir)
+        {
+            if(hitCount > 0)
+            {
+                speed *= 2f;
+            }
+            base.ModifySpeed(baseSpeed, ref speed, character, dir);
+        }
 
         public override void OnDamaged(HitData hit, Character attacker)
         {
@@ -43,10 +43,11 @@ namespace ValheimLegends
             base.OnDamaged(hit, attacker);
         }
 
-        public override void ModifyRunStaminaDrain(float baseDrain, ref float drain)
+        public override void ModifyRunStaminaDrain(float baseDrain, ref float drain, Vector3 dir)
         {
+            drain += baseDrain * this.m_runStaminaDrainModifier;
             drain *= .75f * VL_GlobalConfigs.c_rangerBonusRunCost;
-            base.ModifyRunStaminaDrain(baseDrain, ref drain);
+            base.ModifyRunStaminaDrain(baseDrain, ref drain, dir);
         }
 
         public override void UpdateStatusEffect(float dt)
