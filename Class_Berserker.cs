@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using BepInEx;
-using BepInEx.Configuration;
-using HarmonyLib;
 using UnityEngine;
 using System.Reflection;
-using System.Threading;
 
 namespace ValheimLegends
 {
