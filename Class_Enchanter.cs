@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using HarmonyLib;
 using UnityEngine;
@@ -137,11 +138,6 @@ namespace ValheimLegends
                         //((ZSyncAnimation)typeof(Player).GetField("m_zanim", BindingFlags.Instance | BindingFlags.NonPublic).GetValue(player)).SetTrigger("gpower");
                         ValheimLegends.isChanneling = true;
                         ValheimLegends.shouldUseGuardianPower = false;
-                        //Ability Cooldown
-                        StatusEffect se_cd = (SE_Ability3_CD)ScriptableObject.CreateInstance(typeof(SE_Ability3_CD));
-                        se_cd.m_ttl = VL_Utility.GetZoneChargeCooldownTime;
-                        player.GetSEMan().AddStatusEffect(se_cd);
-
                         //Ability Cost
                         player.UseStamina(VL_Utility.GetZoneChargeCost);
 
@@ -173,7 +169,7 @@ namespace ValheimLegends
             }
             else if ((VL_Utility.Ability3_Input_Pressed && player.GetStamina() > 1 && player.GetStamina() > VL_Utility.GetZoneChargeCostPerUpdate) && Mathf.Max(0f, altitude - player.transform.position.y) <= 1f && (zonechargeCharging && ValheimLegends.isChanneling))
             {
-                VL_Utility.SetTimer();
+                //VL_Utility.SetTimer();
                 ValheimLegends.isChanneling = true;
                 zonechargeChargeAmount++;
                 player.UseStamina(VL_Utility.GetZoneChargeCostPerUpdate);
@@ -191,8 +187,9 @@ namespace ValheimLegends
                     zonechargeSkillGain += .2f;
                 }
             }
-            else if(((VL_Utility.Ability3_Input_Up || player.GetStamina() <= 1 || player.GetStamina() <= VL_Utility.GetZoneChargeCostPerUpdate) || Mathf.Max(0f, altitude - player.transform.position.y) >= 1f) && (zonechargeCharging && ValheimLegends.isChanneling))
+            else if(((VL_Utility.Ability3_Input_Up | player.GetStamina() <= 1) | Mathf.Max(0f, altitude - player.transform.position.y) >= 1f) && (zonechargeCharging))
             {
+                ZLog.Log("We made it!");
                 //Skill influence
                 float sLevel = player.GetSkills().GetSkillList().FirstOrDefault((Skills.Skill x) => x.m_info == ValheimLegends.AbjurationSkillDef).m_level;
 
@@ -201,12 +198,11 @@ namespace ValheimLegends
                 allCharacters.Clear();
                 Character.GetCharactersInRange(player.transform.position, (30f + .2f * sLevel), allCharacters);
                 float bonusModifiers = ((3f * sLevel) + 2 * zonechargeCount) * VL_GlobalConfigs.c_enchanterBiome;
-                //SE_Ability3_CD se3 = (SE_Ability3_CD)player.GetSEMan().GetStatusEffect("SE_VL_Ability3_CD".GetStableHashCode());
-                //if (se3 != null)
-                //{
-                //    //ZLog.Log("zone count was " + zonechargeCount);
-                //    //se3.m_ttl -= zonechargeCount;
-                //}
+                //Ability Cooldown
+                StatusEffect se_cd = (SE_Ability3_CD)ScriptableObject.CreateInstance(typeof(SE_Ability3_CD));
+                se_cd.m_ttl = VL_Utility.GetZoneChargeCooldownTime;
+                player.GetSEMan().AddStatusEffect(se_cd);
+                //Biome check and buff allocation
                 if (player.GetCurrentBiome() == Heightmap.Biome.Meadows)
                 {
                     GameObject effect = ZNetScene.instance.GetPrefab("vfx_Potion_stamina_medium");
